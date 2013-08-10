@@ -1,0 +1,5 @@
+"Use the <Leader>p key combo to access the :toggle-proxy command.
+nmap <Leader>p :toggleproxy<CR>
+
+
+" vim: set ft=pentadactyl
