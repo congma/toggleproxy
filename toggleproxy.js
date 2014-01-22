@@ -8,7 +8,7 @@
  * 	Copy the .js and .penta (optional) files to ~/.pentadactyl/plugins/
  *
  * Copyright:
- * 	Copyright (c) 2013, Cong Ma <cma@mail.bnu.edu.cn>
+ * 	Copyright (c) 2013-2014, Cong Ma <cma@pmo.ac.cn>
  * 	All rights reserved.
  *
  * License:
@@ -34,6 +34,15 @@ var toggle_manual_proxy = function ()
     return show_proxy();
 };
 
+var set_socks_port = function (portn)
+{
+    var x = parseInt(portn);
+    if ( x < 0 || x > 65535 )
+	return dactyl.echo('Error: invalid port number.');
+    else
+	return prefs.set('network.proxy.socks_port', x);
+}
+
 group.commands.add(["showproxy", "spx"],
 	"Display the current proxy setting.",
 	show_proxy,
@@ -46,19 +55,26 @@ group.commands.add(["toggleproxy", "tpx"],
 	{argCount: "0"},
 	true);
 
+group.commands.add(["sxportnum", "spn"],
+	"Set the SOCKS port number.",
+	set_socks_port,
+	{argCount: "1"},
+	true);
+
 /* Plugin manifest */
 var INFO = 
-    <plugin name="toggleproxy" version="0.1"
+    <plugin name="toggleproxy" version="0.2"
 	    summary="Toggle the current manual proxy setting."
 	    xmlns={NS}>
-    <author email="cma@mail.bnu.edu.cn">Cong Ma</author>
+    <author email="cma@pmo.ac.cn">Cong Ma</author>
     <license href="http://opensource.org/licenses/BSD-2-Clause">BSD License</license>
     <project name="Pentadactyl" min-version="1.0"/>
 
     <p>
 	This plugin implements the <ex>:toggleproxy</ex> command that turns the
 	manual proxy setting on and off in Firefox.  In addition, the
-	<ex>:showproxy</ex> command returns the current proxy status.
+	<ex>:showproxy</ex> command returns the current proxy status.  SOCKS
+	proxy port number can be set using the <ex>:sxportnum</ex> command.
     </p>
 
     <item>
@@ -77,6 +93,16 @@ var INFO =
 	<description>
 	    <p>
 		Toggle the manual proxy setting.
+	    </p>
+	</description>
+    </item>
+
+    <item>
+	<tags>:spn :sxportnum</tags>
+	<spec>:sxportnum port</spec>
+	<description>
+	    <p>
+		Set the SOCKS port number.
 	    </p>
 	</description>
     </item>
