@@ -9,7 +9,7 @@ flash.
 * `:sxportnum port`, `:spn port`: set the port number for SOCKS proxy.
 * Press `<Leader>p` to invoke the `:toggleproxy` command.  The `<Leader>` key
 is the back-slash `\` by default, but can be configured in your
-`pentadactylrc`.
+`.pentadactylrc` file.
 
 
 ## Installation
