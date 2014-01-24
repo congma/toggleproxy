@@ -1,6 +1,6 @@
 # toggleproxy
-toggleproxy: a [Pentadactyl][pdlink] plugin that toggles manual
-proxy on and off in a flash.
+toggleproxy: a [Pentadactyl][pdlink] plugin for switching proxy settings in a
+flash.
 
 
 ## Usage
