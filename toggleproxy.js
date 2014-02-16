@@ -62,49 +62,41 @@ group.commands.add(["sxportnum", "spn"],
 	true);
 
 /* Plugin manifest */
-var INFO = 
-    <plugin name="toggleproxy" version="0.2"
-	    summary="Toggle the current manual proxy setting."
-	    xmlns={NS}>
-    <author email="cma@pmo.ac.cn">Cong Ma</author>
-    <license href="http://opensource.org/licenses/BSD-2-Clause">BSD License</license>
-    <project name="Pentadactyl" min-version="1.0"/>
-
-    <p>
-	This plugin implements the <ex>:toggleproxy</ex> command that turns the
-	manual proxy setting on and off in Firefox.  In addition, the
-	<ex>:showproxy</ex> command returns the current proxy status.  SOCKS
-	proxy port number can be set using the <ex>:sxportnum</ex> command.
-    </p>
-
-    <item>
-	<tags>:spx :showproxy</tags>
-	<spec>:showproxy</spec>
-	<description>
-	    <p>
-		Display current proxy setting.
-	    </p>
-	</description>
-    </item>
-
-    <item>
-	<tags>:tpx :toggleproxy</tags>
-	<spec>:toggleproxy</spec>
-	<description>
-	    <p>
-		Toggle the manual proxy setting.
-	    </p>
-	</description>
-    </item>
-
-    <item>
-	<tags>:spn :sxportnum</tags>
-	<spec>:sxportnum port</spec>
-	<description>
-	    <p>
-		Set the SOCKS port number.
-	    </p>
-	</description>
-    </item>
-
-</plugin>
+var INFO =
+["plugin",  { name:    "toggleproxy",
+              version: "0.2",
+              href:    "https://github.com/congma/toggleproxy",
+              summary: "Toggle the current manual proxy setting.",
+              xmlns:   "dactyl" },
+["author",  { email:   "cma@pmo.ac.cn" }, "Cong Ma"],
+["license", { href:    "http://opensource.org/licenses/BSD-2-Clause" }, "BSD License"],
+["project", { name:    "Pentadactyl", "min-version": "1.0" }],
+    ["p", {},
+        "This plugin implements the <ex>:toggleproxy</ex> command that turns the ",
+	      "manual proxy setting on and off in Firefox.  In addition, the ",
+	      "<ex>:showproxy</ex> command returns the current proxy status.  SOCKS ",
+	      "proxy port number can be set using the <ex>:sxportnum</ex> command."],
+    ["item", {},
+        ["tags", {}, ":spx", ":showproxy"],
+        ["strut"],
+        ["spec", {}, ":showproxy"],
+        ["description", {},
+            ["p", {},
+                "Display current proxy setting."
+                ]]],
+    ["item", {},
+        ["tags", {}, ":tpx", ":toggleproxy"],
+        ["strut"],
+        ["spec", {}, ":toggleproxy"],
+        ["description", {},
+            ["p", {},
+                "Toggle the manual proxy setting."
+                ]]]
+    ["item", {},
+        ["tags", {}, ":spn", ":sxportnum"],
+        ["strut"],
+        ["spec", {}, ":sxportnum port"],
+        ["description", {},
+            ["p", {},
+                "Set the SOCKS port number."
+                ]]]];
