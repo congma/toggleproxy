@@ -63,40 +63,56 @@ group.commands.add(["sxportnum", "spn"],
 
 /* Plugin manifest */
 var INFO =
-["plugin",  { name:    "toggleproxy",
-              version: "0.2",
-              href:    "https://github.com/congma/toggleproxy",
-              summary: "Toggle the current manual proxy setting.",
-              xmlns:   "dactyl" },
-["author",  { email:   "cma@pmo.ac.cn" }, "Cong Ma"],
-["license", { href:    "http://opensource.org/licenses/BSD-2-Clause" }, "BSD License"],
-["project", { name:    "Pentadactyl", "min-version": "1.0" }],
+["plugin", {
+    name:    "toggleproxy",
+    version: "0.2",
+    href:    "https://github.com/congma/toggleproxy",
+    summary: "toggleproxy - switching proxy settings in a flash",
+    xmlns:   "dactyl"},
+
+    ["author", {
+	email:  "cma@pmo.ac.cn",
+	href:   "http://cma.lamost.org/"}, "Cong Ma"],
+
+    ["license", {href: "http://opensource.org/licenses/BSD-2-Clause"},
+	"BSD License"],
+
+    ["project", {name: "Pentadactyl", "min-version": "1.0" }],
+
     ["p", {},
-        "This plugin implements the <ex>:toggleproxy</ex> command that turns the ",
-	      "manual proxy setting on and off in Firefox.  In addition, the ",
-	      "<ex>:showproxy</ex> command returns the current proxy status.  SOCKS ",
-	      "proxy port number can be set using the <ex>:sxportnum</ex> command."],
+	"The ", ["str", {}, "toggleproxy"], " plugin implements the ",
+	["str", {}, ":toggleproxy"],
+	" command that turns the manual proxy setting on and off in Firefox.",
+	"  In addition, the ", ["str", {}, ":showproxy"], " command returns",
+	" the current proxy status.  SOCKS proxy port number can be set",
+	" using the ", ["str", {}, ":sxportnum"], " command."],
+
     ["item", {},
-        ["tags", {}, ":spx", ":showproxy"],
-        ["strut"],
-        ["spec", {}, ":showproxy"],
-        ["description", {},
-            ["p", {},
-                "Display current proxy setting."
-                ]]],
+	["tags", {}, ":spx :showproxy"],
+	["strut", {}],
+	["spec", {}, ":showproxy"],
+	["description", {},
+	    ["p", {}, "Display the current proxy setting."]]],
+
     ["item", {},
-        ["tags", {}, ":tpx", ":toggleproxy"],
-        ["strut"],
-        ["spec", {}, ":toggleproxy"],
-        ["description", {},
-            ["p", {},
-                "Toggle the manual proxy setting."
-                ]]]
+	["tags", {}, ":tpx :toggleproxy"],
+	["strut", {}],
+	["spec", {}, ":toggleproxy"],
+	["description", {},
+	    ["p", {},
+		"Toggle the current manual proxy setting."],
+	    ["p", {},
+		"By default, this command is mapped to",
+		" the key combo ", ["str", {}, ["k", {name: "Leader"}], "p"],
+		":"],
+	    ["code", {},
+		["ex", {}, ":nmap"], " ", ["k", {name: "Leader"}],
+		"p ", ["ex", {}, ":toggleproxy"], ["k", {name: "CR"}]]]],
+
     ["item", {},
-        ["tags", {}, ":spn", ":sxportnum"],
-        ["strut"],
-        ["spec", {}, ":sxportnum port"],
-        ["description", {},
-            ["p", {},
-                "Set the SOCKS port number."
-                ]]]];
+	["tags", {}, ":spn :sxportnum"],
+	["strut", {}],
+	["spec", {}, ":sxportnum ", ["a", {}, "port"]],
+	["description", {},
+	    ["p", {}, "Set the SOCKS port number."],
+	    ["example", {}, ["ex", {}, ":spn 9274"]]]]];
