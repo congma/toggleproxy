@@ -18,6 +18,7 @@
 /*
  * FIXME: Add more supported proxy types and settings.
  */
+"use strict";
 
 var show_proxy = function ()
 {
