@@ -38,7 +38,7 @@ var toggle_manual_proxy = function ()
 var set_socks_port = function (portn)
 {
     var x = parseInt(portn);
-    if ( x < 0 || x > 65535 )
+    if ( isNaN(x) || x < 0 || x > 65535 )
 	return dactyl.echo("Error: invalid port number.");
     else
 	return prefs.set("network.proxy.socks_port", x);
