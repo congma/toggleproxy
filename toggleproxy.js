@@ -1,8 +1,5 @@
-/* Pentadactyl plugin for toggling the proxy status on and off.
- * This plugin provides the command :toggle-proxy (or :tpx)
- * that turns the manual proxy setting on and off.  In addition,
- * the :show-proxy (:spx) command can echo the current status
- * of proxy type setting.
+/* toggleproxy -- Pentadactyl plugin for switching the proxy settings
+ * in a flash.  See embedded documentation for more.
  *
  * Installation:
  * 	Copy the .js and .penta (optional) files to ~/.pentadactyl/plugins/
