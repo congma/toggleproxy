@@ -22,16 +22,16 @@
 
 var show_proxy = function ()
 {
-    return dactyl.echo("proxy: " + prefs.get('network.proxy.type'));
+    return dactyl.echo("proxy: " + prefs.get("network.proxy.type"));
 };
 
 var toggle_manual_proxy = function ()
 {
-    var proxtype = prefs.get('network.proxy.type');
+    var proxtype = prefs.get("network.proxy.type");
     if ( proxtype == 0 )
-	prefs.set('network.proxy.type', 1);
+	prefs.set("network.proxy.type", 1);
     else
-	prefs.set('network.proxy.type', 0);
+	prefs.set("network.proxy.type", 0);
     return show_proxy();
 };
 
@@ -39,9 +39,9 @@ var set_socks_port = function (portn)
 {
     var x = parseInt(portn);
     if ( x < 0 || x > 65535 )
-	return dactyl.echo('Error: invalid port number.');
+	return dactyl.echo("Error: invalid port number.");
     else
-	return prefs.set('network.proxy.socks_port', x);
+	return prefs.set("network.proxy.socks_port", x);
 }
 
 group.commands.add(["showproxy", "spx"],
