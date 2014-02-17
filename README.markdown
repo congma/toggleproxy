@@ -18,7 +18,7 @@ Copy the files `toggleproxy.js` and `toggleproxy.penta` to your
 Pentadactyl (`:rehash`) or restart Firefox.
 
 ## Copyright
-Copyright (c) 2013-2014, Cong Ma
+Copyright (c) 2013-2014, Cong Ma & Contributors
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without

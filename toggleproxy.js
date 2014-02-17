@@ -8,7 +8,7 @@
  * 	Copy the .js and .penta (optional) files to ~/.pentadactyl/plugins/
  *
  * Copyright:
- * 	Copyright (c) 2013-2014, Cong Ma <cma@pmo.ac.cn>
+ * 	Copyright (c) 2013-2014, Cong Ma <cma@pmo.ac.cn> & Contributors
  * 	All rights reserved.
  *
  * License:
