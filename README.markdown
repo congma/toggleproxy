@@ -1,24 +1,25 @@
-# toggleproxy
+## toggleproxy
 toggleproxy: a [Pentadactyl][pdlink] plugin for switching proxy settings in a
 flash.
 
 
-## Usage
+### Usage
 * `:toggleproxy`, `:tpx`: toggle manual proxy on and off.
 * `:showproxy`, `:spx`: display current proxy status.
 * `:sxportnum port`, `:spn port`: set the port number for SOCKS proxy.
-* Press `<Leader>p` to invoke the `:toggleproxy` command.  The `<Leader>` key
-is the back-slash `\` by default, but can be configured in your
-`.pentadactylrc` file.
+* Press <kbd>&lt;Leader&gt;</kbd><kbd>p</kbd> to invoke the `:toggleproxy`
+  command.  The <kbd>&lt;Leader&gt;</kbd> key is the back-slash
+  <kbd>&bsol;</kbd> by default, but can be configured in your `.pentadactylrc`
+  file.
 
 
-## Installation
+### Installation
 Copy the files `toggleproxy.js` and `toggleproxy.penta` to your
 `~/.pentadactyl/plugins/` directory.  After that you may need to rehash
 Pentadactyl (`:rehash`) or restart Firefox.
 
 
-## Copyright
+### Copyright
 Copyright (c) 2013-2014, Cong Ma & Contributors  
 All rights reserved.
 

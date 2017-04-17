@@ -1,4 +1,4 @@
-"Use the <Leader>p key combo to access the :toggle-proxy command.
+"Use the <Leader>p key combo to access the :toggleproxy command.
 nmap <Leader>p :toggleproxy<CR>
 
 

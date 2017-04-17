@@ -36,7 +36,7 @@ var set_socks_port = function (portn)
 {
     var x = parseInt(portn);
     if ( isNaN(x) || x < 0 || x > 65535 )
-	return dactyl.echo("Error: invalid port number.");
+	return dactyl.echoerr("Error: invalid port number.");
     else
 	return prefs.set("network.proxy.socks_port", x);
 }
@@ -70,7 +70,7 @@ var INFO =
 
     ["author", {
 	email:  "cma@pmo.ac.cn",
-	href:   "http://cma.lamost.org/"}, "Cong Ma"],
+	href:   "https://cma.lamost.org/"}, "Cong Ma"],
 
     ["license", {href: "http://opensource.org/licenses/BSD-2-Clause"},
 	"BSD License"],
