@@ -72,12 +72,12 @@ var INFO =
 	    ["p", {}, "Set the SOCKS port number."],
 	    ["example", {}, ["ex", {}, ":spn 9274"]]]]];
 
-var show_proxy = function ()
+function show_proxy()
 {
     return dactyl.echo("proxy: " + prefs.get("network.proxy.type"));
-};
+}
 
-var toggle_manual_proxy = function ()
+function toggle_manual_proxy()
 {
     var proxtype = prefs.get("network.proxy.type");
     if ( proxtype == 0 )
@@ -85,16 +85,16 @@ var toggle_manual_proxy = function ()
     else
 	prefs.set("network.proxy.type", 0);
     return show_proxy();
-};
+}
 
-var set_socks_port = function (portn)
+function set_socks_port(portn)
 {
     var x = parseInt(portn);
     if ( isNaN(x) || x < 0 || x > 65535 )
 	return dactyl.echoerr("Error: invalid port number.");
     else
 	return prefs.set("network.proxy.socks_port", x);
-};
+}
 
 group.commands.add(["showproxy", "spx"],
 	"Display the current proxy setting.",
