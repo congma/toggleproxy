@@ -39,7 +39,7 @@ var set_socks_port = function (portn)
 	return dactyl.echoerr("Error: invalid port number.");
     else
 	return prefs.set("network.proxy.socks_port", x);
-}
+};
 
 group.commands.add(["showproxy", "spx"],
 	"Display the current proxy setting.",
@@ -62,20 +62,20 @@ group.commands.add(["sxportnum", "spn"],
 /* Plugin manifest */
 var INFO =
 ["plugin", {
-    name:    "toggleproxy",
-    version: "0.2",
-    href:    "https://github.com/congma/toggleproxy",
-    summary: "toggleproxy - switching proxy settings in a flash",
-    xmlns:   "dactyl"},
+    "name":    "toggleproxy",
+    "version": "0.2",
+    "href":    "https://github.com/congma/toggleproxy",
+    "summary": "toggleproxy - switching proxy settings in a flash",
+    "xmlns":   "dactyl"},
 
     ["author", {
-	email:  "cma@pmo.ac.cn",
-	href:   "https://cma.lamost.org/"}, "Cong Ma"],
+	"email":  "cma@pmo.ac.cn",
+	"href":   "https://cma.lamost.org/"}, "Cong Ma"],
 
-    ["license", {href: "http://opensource.org/licenses/BSD-2-Clause"},
+    ["license", {"href": "http://opensource.org/licenses/BSD-2-Clause"},
 	"BSD License"],
 
-    ["project", {name: "Pentadactyl", "min-version": "1.0" }],
+    ["project", {"name": "Pentadactyl", "min-version": "1.0" }],
 
     ["p", {},
 	"The ", ["str", {}, "toggleproxy"], " plugin implements the ",
@@ -101,11 +101,11 @@ var INFO =
 		"Toggle the current manual proxy setting."],
 	    ["p", {},
 		"By default, this command is mapped to",
-		" the key combo ", ["str", {}, ["k", {name: "Leader"}], "p"],
+		" the key combo ", ["str", {}, ["k", {"name": "Leader"}], "p"],
 		":"],
 	    ["code", {},
-		["ex", {}, ":nmap"], " ", ["k", {name: "Leader"}],
-		"p ", ["ex", {}, ":toggleproxy"], ["k", {name: "CR"}]]]],
+		["ex", {}, ":nmap"], " ", ["k", {"name": "Leader"}],
+		"p ", ["ex", {}, ":toggleproxy"], ["k", {"name": "CR"}]]]],
 
     ["item", {},
 	["tags", {}, ":spn :sxportnum"],
